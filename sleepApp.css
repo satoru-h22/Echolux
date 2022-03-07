@@ -1,3 +1,7 @@
+/*************
+    Layout
+**************/
+
 .wrapper {
   margin: 0;
   display: grid;
@@ -42,8 +46,30 @@ footer {
   height: 50px;
 }
 
+/******************* 
+ General components
+********************/
+
 a {
   color: #8fc9d9;
+}
+
+/*************
+   Home Page
+**************/
+h1.appName {
+  text-align: center;
+}
+
+.homeBox {
+  width: 40%;
+  background-color: #c4e3ec;
+  text-align: center;
+  margin: 20px auto;
+}
+p {
+  font-size: 0.75em;
+  margin-top: -10px;
 }
 
 .hovertext {
@@ -75,6 +101,17 @@ a {
 .hovertext:hover::before {
   opacity: 1;
   visibility: visible;
+}
+
+/****************
+   Profile Page
+*****************/
+.container {
+  padding: 16px;
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
 }
 
 .profile {
@@ -172,18 +209,4 @@ span.psw {
 	margin: auto;
 	padding: 10px;
   }*/
-}
-h1.appName {
-  text-align: center;
-}
-
-.homeBox {
-  width: 40%;
-  background-color: #c4e3ec;
-  text-align: center;
-  margin: 20px auto;
-}
-p {
-  font-size: 0.75em;
-  margin-top: -10px;
 }
