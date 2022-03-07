@@ -51,7 +51,17 @@ footer {
 ********************/
 
 a {
+  text-decoration: none;
+}
+
+nav a {
   color: #8fc9d9;
+  padding: 5px 10px;
+}
+
+nav a:hover {
+  background-color: #8fc9d9;
+  color: #243236;
 }
 
 /*************
