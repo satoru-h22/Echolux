@@ -1,0 +1,157 @@
+<html>
+    <style>
+        body{ text-align: center;}
+    </style>
+    <body>
+        <h3>Please fill out the following questions with your best judgement.</h3>
+        <p><b>Survey#1</b></p>
+
+        <!--date-->
+        <input type="date" style="text-align: center;" id="currentDate">
+
+    <br><br>
+    <!--<script>
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    document.getElementById("currentDate").value = date;
+            </script>-->
+                         
+        <br>
+
+        <!--form-->
+        <form>
+            
+
+            <!--Question1-->
+
+            <label for ="q1"><b>1.</b> What time did you go to bed? </label>
+
+                <br><br>
+
+                <input type="time" id="ansq1" name="ansq1">
+
+                <br><br>
+
+                 <!--Question2-->
+
+                <label for ="q2"><b>2.</b> What time did you turn off the lights? </label>
+
+                <br><br>
+
+                <input type="time" id="ansq2" name="ansq2">
+                
+                   
+                     </select>
+
+                <br><br>
+
+                <!--Question3-->
+
+                <label for ="q3"><b>3.</b> How long did it take you to fall asleep?(in hours).</label>
+
+                <br><br>
+
+
+                <select id="timelights" name="Time">
+                  <option value="1">1</option> 
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select> 
+
+                
+              
+
+                <br><br>
+                    
+                 <!--Question4-->
+
+                <label for ="q4"><b>4.</b> How many times did you wake up last night?</label>
+
+                <br><br>
+
+
+                <select id="howtime" name="howtime">
+                    <option value="1">0-5</option>
+                    <option value="2">6-10</option>
+                    <option value="3">11-15</option>
+                    <option value="4">16+</option>
+                  </select>
+
+                <br><br>
+
+                 <!--Question5-->
+
+                <label for ="q5"><b>5.</b> What was your final wake up time this morning?</label>
+
+                <br><br>
+
+
+                <input type="time" id="ansq5" name="ansq5">
+                  
+                  <br><br>
+
+                   <!--Question6-->
+                
+                  <label for ="q6"><b>6.</b> What time did you get out of bed?</label> 
+                  
+                  <br><br>
+
+
+                <input type="time" id="ansq6" name="ansq6">
+
+                     <br><br>
+
+                     <!--Question7-->
+
+                    <label for ="q7"><b>7.</b> Sleep Medications(indicate dose and type)</label>
+
+                     <br><br>
+
+                     <input type="text" id="ansq7" name="ansq7">
+
+                     <br><br>
+
+                     <!--Question8-->
+
+                     <label for ="q8"><b>8.</b> Rate your sleep 1-5<br>
+                        (1 = very poor, 5 = very good)
+                        </label>
+
+                    <br><br>
+
+
+                    <input type="number" id="quality" name="quality" min="1" max="5">
+                  
+                      <br><br>
+
+                       <!--Question9-->
+
+                      <label for ="q9"><b>9.</b> Notes- possible circumstances that<br> might
+                        have contributed to how you slept.
+                        </label>   
+                        
+                        <br><br>
+
+                        <input type = text id = "ansq9" name ="ansq9">
+                     
+                        <br><br>
+
+                          <!--Back&Submitbtn-->
+
+                        <button type="submit">Back</button>
+                        <button type="submit">Submit</button>
+
+
+            
+        </form>
+    </body>
+</html>
