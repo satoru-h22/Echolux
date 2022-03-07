@@ -5,32 +5,101 @@
   <meta charset="utf-8">
   <title>Sleep App | Home</title>
   <link rel="stylesheet" href="sleepApp.css">
+  <style>
+  .wrapper {
+  margin: 0;
+  display: grid;
+  grid-template-areas:
+    "header nav"
+    "main main"
+    "footer footer";
+  width: 100%;
+}
+
+header {
+  grid-area: header;
+  color: white;
+  background-color: #48656d;
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+}
+
+nav {
+  grid-area: nav;
+  color: #c4e3ec;
+  background-color: #48656d;
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+}
+
+article {
+  grid-area: main;
+  color: #243236;
+  background-color: #8fc9d9;
+  width: 100%;
+  height: 500px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #48656d;
+  width: 100%;
+  height: 50px;
+}
+
+a {
+  color: #243236;
+}
+
+  h1.appName {
+  text-align: center;
+}
+
+.homeBox {
+  width: 40%;
+  background-color: #c4e3ec;
+  text-align: center;
+  margin: 20px auto;
+}
+p {
+  font-size: 0.75em;
+  margin-top: -10px;
+}
+  </style>
 </head>
 <body>
     <div class="wrapper">
-        <header>
-          <h1>/ Lana Walsh Coaching</h1>
+		<header>
+          <h1> Lana Walsh Coaching</h1>
         </header>
-        <nav>
-         
-        </nav>
+		<div>
+			<nav>
+			  <a href="home.html">Home</a>
+			  <a href="dailyForm.html">Form</a>
+			  <a href="Profile.html">Profile</a>
+			  <a href="">Report</a>
+			  <a href="helpPage.html">Help</a>
+			</nav>
+		</div>
         <article>
           <!-- This section is for the content-->
           <h1 class='appName'>App name</h1>
               <div class="homeBox">
-                <h3><a>Profile</a></h3>
+                <h3><a href="profile.html">Profile</a></h3>
                 <p>description</p>
               </div>
               <div class="homeBox">
-                <h3><a>Form</a></h3>
+                <h3><a href="dailyForm.html">Form</a></h3>
                 <p>description</p>
               </div>
               <div class="homeBox">
-                <h3><a>Weekly Report</a></h3>
+                <h3><a href="report.html">Weekly Report</a></h3>
                 <p>description</p>
               </div>
               <div class="homeBox">
-                <h3><a>Help</a></h3>
+                <h3><a href="helpPage.html">Help</a></h3>
                 <p>description</p>
               </div>
               
