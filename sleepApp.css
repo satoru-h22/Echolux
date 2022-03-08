@@ -57,7 +57,7 @@ a {
 nav a {
   color: #8fc9d9;
   font-weight: bold;
-  padding: 5px 8px;
+  padding: 5px 5px;
 }
 
 nav a:hover {
@@ -221,4 +221,23 @@ span.psw {
 	margin: auto;
 	padding: 10px;
   }*/
+}
+
+/****************
+   Report Page
+*****************/
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 700px) {
+  .column {
+    width: 100%;
+  }
 }
