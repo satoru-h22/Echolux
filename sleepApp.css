@@ -1,6 +1,9 @@
 /*************
     Layout
 **************/
+body {
+  margin: 0;
+}
 
 .wrapper {
   margin: 0;
@@ -19,6 +22,8 @@ header {
   width: 100%;
   height: 80px;
   padding: 10px;
+  display: flex;
+  align-items: flex-end;
 }
 
 nav {
@@ -28,7 +33,9 @@ nav {
   width: 100%;
   height: 80px;
   padding: 10px;
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
 }
 
 article {
@@ -37,6 +44,7 @@ article {
   width: 100%;
   height: 1000px;
   text-align: center;
+  padding: 10px;
 }
 
 footer {
@@ -44,6 +52,7 @@ footer {
   background-color: #48656d;
   width: 100%;
   height: 50px;
+  padding: 10px;
 }
 
 /******************* 
@@ -53,16 +62,36 @@ footer {
 a {
   text-decoration: none;
 }
-
+.headerS {
+  color: #c4e3ec;
+  font-size: 3.5em;
+  margin-top: 0px;
+  margin-right: 0.25em;
+  margin-left: 0.25em;
+}
+.headerLogo {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-right: 0.5em;
+}
+.headerSub {
+  font-size: 0.9em;
+  color: #c4e3ec;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 nav a {
+  font-size: 1.2em;
   color: #8fc9d9;
   font-weight: bold;
-  padding: 5px 5px;
+  padding: 5px 15px;
 }
 
 nav a:hover {
-  background-color: #8fc9d9;
   color: #243236;
+  border-top: 4px solid #243236;
   font-weight: bold;
 }
 
@@ -79,40 +108,10 @@ h1.appName {
   text-align: center;
   margin: 20px auto;
 }
+
 p {
   font-size: 0.75em;
   margin-top: -10px;
-}
-
-.hovertext {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px solid black;
-  text-align: center;
-}
-
-.hovertext::before {
-  content: attr(data-hover);
-  visibility: hidden;
-  opacity: 0;
-  width: block;
-  background-color: blue;
-  color: #fff;
-  text-align: center;
-  border-radius: 5px;
-  padding: 5px 0px;
-  transition: opacity 1s ease-in-out;
-  margin: 5pt;
-
-  position: absolute;
-  z-index: 1;
-  left: 0px;
-  top: 110%;
-}
-
-.hovertext:hover::before {
-  opacity: 1;
-  visibility: visible;
 }
 
 /****************
@@ -195,6 +194,84 @@ span.psw {
   padding-top: 16px;
 }
 
+/****************
+   Report Page
+*****************/
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/****************
+   Help Page
+*****************/
+
+.hovertext {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.hovertext::before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: block;
+  background-color: blue;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0px;
+  transition: opacity 1s ease-in-out;
+  margin: 5pt;
+
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+  top: 110%;
+}
+
+.hovertext:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Screen size for a tablet */
+@media screen and (max-width: 1024px) {
+  body {
+    margin: 0;
+  }
+  #wrapper {
+    margin: 0;
+    display: grid;
+    grid-template-areas: "header" "nav" "main" "footer";
+    width: 100%;
+  }
+
+  .headerSub {
+    display: none;
+  }
+}
+/* Screen size for a mobile device */
+@media screen and (max-width: 768px) {
+  #wrapper {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+  }
+  .column {
+    width: 100%;
+  }
+}
+
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {
@@ -221,23 +298,4 @@ span.psw {
 	margin: auto;
 	padding: 10px;
   }*/
-}
-
-/****************
-   Report Page
-*****************/
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 15px;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-@media screen and (max-width: 700px) {
-  .column {
-    width: 100%;
-  }
 }
