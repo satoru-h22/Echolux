@@ -1,0 +1,314 @@
+/*************
+    Layout
+**************/
+
+.wrapper {
+  margin: 0;
+  display: grid;
+  grid-template-areas:
+    "header nav"
+    "main main"
+    "footer footer";
+  width: 100%;
+}
+
+header {
+  grid-area: header;
+  color: white;
+  background-color: #48656d;
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+}
+
+nav {
+  grid-area: nav;
+  color: #c4e3ec;
+  background-color: #48656d;
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  text-align: center;
+}
+
+article {
+  grid-area: main;
+  background-color: #8fc9d9;
+  width: 100%;
+  height: 1000px;
+  text-align: center;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #48656d;
+  width: 100%;
+  height: 50px;
+}
+
+/******************* 
+ General components
+********************/
+
+a {
+  text-decoration: none;
+}
+
+nav a {
+  color: #8fc9d9;
+  font-weight: bold;
+  padding: 5px 5px;
+}
+
+nav a:hover {
+  background-color: #8fc9d9;
+  color: #243236;
+  font-weight: bold;
+}
+
+/*************
+   Home Page
+**************/
+h1.appName {
+  text-align: center;
+}
+
+.homeBox {
+  width: 40%;
+  background-color: #c4e3ec;
+  text-align: center;
+  margin: 20px auto;
+}
+p {
+  font-size: 0.75em;
+  margin-top: -10px;
+}
+
+.hovertext {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.hovertext::before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: block;
+  background-color: blue;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0px;
+  transition: opacity 1s ease-in-out;
+  margin: 5pt;
+
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+  top: 110%;
+}
+
+.hovertext:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/****************
+   Profile Page
+*****************/
+.container {
+  padding: 16px;
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.profile {
+  /*width: 50%;
+    left: 50%;
+    position: absolute;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+}
+
+/*body {
+	font-family: Arial, Helvetica, sans-serif;
+    background-color: #48656d;
+	}
+  */
+/*form {
+	border: 3px solid black;
+	border-bottom: none;
+    background-color: #8FC9D9;
+	}
+*/
+/*input[type=text], input[type=password] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}*/
+
+button {
+  background-color: #243236;
+  color: #c4e3ec;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  /*width: %;*/
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #243236;
+  color: #c4e3ec;
+}
+
+/*.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}*/
+
+/*img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}*/
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+
+  .changepass {
+    width: 50%;
+    padding: 20px 18px;
+  }
+  /* added to sleep app.css
+  .profile { 
+   /* width: 50%;
+    left: 50%;
+    <!--position: absolute;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+
+  /*max-width: 500px;
+	margin: auto;
+	padding: 10px;
+  }*/
+}
+
+/****************
+   Report Page
+*****************/
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+.sleep {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%, -50%);
+    width: 550px;
+    height: 330px;
+    background: transparent;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    display: flex;
+}
+
+.sleep .sleep-day {
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+.sleep .sleep-day .graph {
+    position: absolute;
+    width: 40px;
+    background: rgb(0, 0, 0, 1);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sleep .sleep-day .graph::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 0;
+    background: linear-gradient(0deg, #003ba5, #009ffe);
+}
+.sleep .sleep-day .graph::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(231, 29, 14, 0.1);
+}
+.sleep .sleep-day .graph .percent {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+.sleep .sleep-day .name {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    background: #001e8a;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.graphContainer { 
+	Position: absolute;
+	
+}
