@@ -1,6 +1,7 @@
 /*************
     Layout
 **************/
+
 body {
   margin: 0;
 }
@@ -42,7 +43,7 @@ article {
   grid-area: main;
   background-color: #8fc9d9;
   width: 100%;
-  height: 1000px;
+  min-height: 500px;
   text-align: center;
   padding: 10px;
 }
@@ -207,6 +208,73 @@ span.psw {
   display: table;
   clear: both;
 }
+.sleep {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%, -50%);
+  width: 550px;
+  height: 330px;
+  background: transparent;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  display: flex;
+}
+
+.sleep .sleep-day {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+.sleep .sleep-day .graph {
+  position: absolute;
+  width: 40px;
+  background: rgb(0, 0, 0, 1);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sleep .sleep-day .graph::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 0;
+  background: linear-gradient(0deg, #003ba5, #009ffe);
+}
+.sleep .sleep-day .graph::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(231, 29, 14, 0.1);
+}
+.sleep .sleep-day .graph .percent {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+.sleep .sleep-day .name {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  background: #001e8a;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.graphContainer {
+  position: absolute;
+}
 
 /****************
    Help Page
@@ -248,24 +316,35 @@ span.psw {
   body {
     margin: 0;
   }
-  #wrapper {
+  .wrapper {
     margin: 0;
     display: grid;
     grid-template-areas: "header" "nav" "main" "footer";
     width: 100%;
   }
-
+  nav {
+    height: 30px;
+  }
   .headerSub {
-    display: none;
+    margin-left: 30%;
   }
 }
 /* Screen size for a mobile device */
 @media screen and (max-width: 768px) {
-  #wrapper {
+  .wrapper {
     margin: 0;
     display: flex;
     flex-direction: column;
-    width: 700px;
+    width: 100%;
+  }
+  nav {
+    height: 30px;
+  }
+  .headerSub {
+    display: none;
+  }
+  .homeBox {
+    width: 75%;
   }
   .column {
     width: 100%;
