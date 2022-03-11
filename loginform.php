@@ -50,7 +50,7 @@ elseif (isset($_REQUEST['submit'])){
 			$_SESSION['email'] = $email;
 			$_SESSION['admin'] = $admin;
 			session_write_close();
-			header('Location: profile.php');
+			header('Location: home.html');
 			
 		}
 	}
