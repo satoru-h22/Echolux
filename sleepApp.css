@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .wrapper {
@@ -101,13 +102,25 @@ nav a:hover {
    Home Page
 **************/
 h1.appName {
+  font-size: 2em;
   text-align: center;
+}
+
+h3.homeLinks a {
+  font-size: 1.2em;
+  color: #243236;
+}
+
+h3.homeLinks a:hover {
+  color: #fff;
+  background-color: #243236;
 }
 
 .homeBox {
   width: 40%;
   background-color: #c4e3ec;
   text-align: center;
+  padding: 5px 10px;
   margin: 20px auto;
 }
 
