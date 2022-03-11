@@ -1,4 +1,5 @@
 <?php
+//buffers output to ensure headers work where they need to work
 ob_start();	
 function createUpdateAccount(){
 	//splits users into two main groups - admin and non-admin 
@@ -115,18 +116,20 @@ function editAccount($editType){
 			elseif(isset($_REQUEST['editEmail'])){
 				$type = "email";
 				$email = $_REQUEST['editEmail'];
-				$sql = "select * from client where Email = $email";
+				$sql = "select * from Client where Email = '$email'";
 				$result = $conn -> query($sql);
 				$row = $result -> fetch_assoc();
+	
+				if ($row == null) {
 			
-				if ($row == null){
+				
 					writeToAccount($type);
 				
 				
 				}
 				else{
 					
-				echo'<script>alert("Email invalid. Please choose another email")</script>';
+				echo'<script>alert("Email exists. Please choose another email")</script>';
 				
 				}
 			}
@@ -215,7 +218,7 @@ function getAccountinfo(){
 		
 	}
 	else{
-		echo'<script>alert("account type unrecognized please logout and log back in again")</script>';
+		echo'<script>alert("account type unrecognized please logout and log back in")</script>';
 		
 	}
 	$conn->close();
@@ -238,11 +241,13 @@ function writeToAccount($actType){
 			$pass2 = $_POST['editPass2'];
 			$administrator = 0;
 			//
-			$sql = "select * from client where Email = '$email'";
+			$sql = "select * from Client where Email = '$email'";
 			$result = $conn -> query($sql);
 			$row = $result -> fetch_assoc();
-			
-			if ($row == null){
+	
+			if ($row == null) {
+		
+		
 			
 				if ($pass == $pass2 && $pass != '0000'){
 
@@ -253,6 +258,7 @@ function writeToAccount($actType){
 				$conn -> query($sql2);
 				session_destroy();
 				echo'<script>alert("account created. Please log in")</script>';
+				unset($_REQUEST);
 				header('Location: loginform.php');
 				
 				}
