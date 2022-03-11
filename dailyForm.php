@@ -1,52 +1,71 @@
 <?php
-	include "config.php";
-	session_start();
-//get stuff
-$clientID = $_SESSION["clientID"];
+//session and database connection
+//include 'createUpdateAccount.php';
+//include 'config.php';
+session_start();
+//get clientId
+$clientID = 1;
+//$_SESSION["clientID"];
+	$servername = "localhost";
+	$username = "root";
+	$password = "Rerooster123!!!";
+	$db ="mydb";
 
-	$sql = "select * from question where Sur_ID = 1;";
-	$result = $conn->query($sql);
-	if($result){
-	$countArr = 0;
-	$questArr = array();
-		while($row = $result->fetch_assoc()){
-			$questArr[$countArr] = $row['Qu_ID'];
-			//echo "$countArr<br>";
-			$countArr =$countArr+1;
-			//echo $questArr[0] ;
-		}
+	  //correct variables
+	  $date = "01-01-2000";
+	  $ansq1 = "";
+	  $ansq2 = "";
+	  $ansq3 = "";
+	  $ansq4 = "";
+	  $ansq5 = "";
+	  $ansq6 = "";
+	  $ansq7 = "";
+	  $ansq8 = "";
+	  $ansq9 = "";
+
+// check connection
+  $conn = mysqli_connect($servername, $username, $password, $db);
+
+  if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
 	}
-	if(isset($_GET['but_submit'])){
-		//echo $questArr[2] ;
-		$counter = 0;
-		$ansArr = array();
-		$day1 = strtotime($_GET['currentDate']);
-		$day1 = date('Y-m-d H:i:s', $day1); 
-	
-		//echo $date;
-		$ansArr[0] = $_GET['ansq1'];
-		$ansArr[1] = $_GET['ansq2'];
-		$ansArr[2] = $_GET['Time'];
-		$ansArr[3] = $_GET['howtime'];
-		$ansArr[4] = $_GET['ansq5'];
-		$ansArr[5] = $_GET['ansq6'];
-		$ansArr[6] = $_GET['ansq7'];
-		$ansArr[7] = $_GET['quality'];
-		$ansArr[8] = $_GET['ansq9'];
-		while($counter < count($questArr)){
-		$ans = $ansArr[$counter];
-		//echo "$ans<br>";
-		//echo $counter;
-		$sql = "INSERT INTO answer (Qu_ID , Client_ID,Date,Answer)
-				Values ('$questArr[$counter]','$clientID','$day1','$ans');";
-	
-				$conn->query($sql);
-		$counter = $counter + 1;
-		}
-		echo'<script>alert("Submitted!")</script>';
+		
+		//when you submit
+    if (isset( $_REQUEST['submit'])) {
+	  $date = $_REQUEST['date'];		
+      $ansq1 = $_REQUEST['ansq1'];
+      $ansq2 = $_REQUEST['ansq2'];
+      $ansq3 = $_REQUEST['ansq3'];
+      $ansq4 = $_REQUEST['ansq4'];
+      $ansq5 = $_REQUEST['ansq5'];
+      $ansq6 = $_REQUEST['ansq6'];
+      $ansq7 = $_REQUEST['ansq7'];
+      $ansq8 = $_REQUEST['ansq8'];
+      $ansq9 = $_REQUEST['ansq9'];
+      
+      //insert into what
+      $sql = "INSERT INTO sleep (questionID, clientId, answer, date)
+      VALUES ('1', '$clientID', '$ansq1', '$date'),
+	  ('2', '$clientID', '$ansq2', '$date'),
+	  ('3', '$clientID', '$ansq3', '$date'),
+	  ('4', '$clientID', '$ansq4', '$date'),
+	  ('5', '$clientID', '$ansq5', '$date'),
+	  ('6', '$clientID', '$ansq6', '$date'),
+	  ('7', '$clientID', '$ansq7', '$date'),
+	  ('8', '$clientID', '$ansq8', '$date'),
+	  ('9', '$clientID', '$ansq9', '$date')";
+	  
 	}
+      $conn->query($sql);
+	  
+	  $conn->close();
+	 
+	  
+      
+	  
+	  
+		
 ?>
-
 
 
 
