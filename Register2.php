@@ -45,7 +45,7 @@ form {border: 3px solid black;
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
-  width: 20%;
+  width: 50%;
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
