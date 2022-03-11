@@ -5,6 +5,7 @@ session_start();
 //get stuff
 $clientID = $_SESSION["clientID"];
 $companyID = $_SESSION['comID'];
+$companyID .= ' look for company names in a future update';
 $firstName = $_SESSION['firstName'];
 $lastName = $_SESSION['lastName'];
 $phone = $_SESSION['phone'];
