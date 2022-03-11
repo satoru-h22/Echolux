@@ -31,8 +31,8 @@ $clientID = 1;
 	}
 		
 		//when you submit
-    if (isset( $_REQUEST['submit'])) {
-	  $date = $_REQUEST['date'];		
+    if (isset( $_REQUEST['submit']) && $_REQUEST['submit'] == "submit") {
+	    $date = $_REQUEST['date'];		
       $ansq1 = $_REQUEST['ansq1'];
       $ansq2 = $_REQUEST['ansq2'];
       $ansq3 = $_REQUEST['ansq3'];
@@ -56,44 +56,38 @@ $clientID = 1;
 	  ('9', '$clientID', '$ansq9', '$date')";
 	  
 	}
-      $conn->query($sql);
+    $conn->query($sql);
 	  
-	  $conn->close();
-	 
-	  
-      
-	  
-	  
+	  $conn->close(); 
 		
 ?>
-
-
-
 
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Sleep App | Home</title>
+  <title>Sleep App | Form</title>
   <link rel="stylesheet" href="sleepApp.css">
 </head>
 <body>
     <div class="wrapper">
-        <header>
-          <h1>/ Lana Walsh Coaching</h1>
-        </header>
-        <div>
-			<nav>
-			  <a href="home.html">Home</a>
-			  <a href="dailyForm.php">Form</a>
-			  <a href="Profile.php">Profile</a>
-			  <a href="report.html">Report</a>
-			  <a href="helpPage.html">Help</a>
-			</nav>
-		</div>
+    <header>
+      <div class="headerS">/ </div>
+      <div class="headerLogo">Lana Walsh<br>Coaching</div>
+      <div class="headerSub">Sleep Coach: Helping you Conquer Insomnia so <br>You Wake up Feeling Rested and Refreshed</div>
+      
+    </header>
+		<nav>
+      <div class="navlink"><a href="home.html">Home</a></div>
+      <div class="navlink"><a href="dailyForm.html">Form</a></div>
+      <div class="navlink"><a href="Profile.html">Profile</a></div>
+      <div class="navlink"><a href="report.html">Report</a></div>
+      <div class="navlink"><a href="helpPage.html">Help</a></div>      
+		</nav>
         <article>
         <!-- This section is for the content-->
+        <h1 class="appName">Daily Sleep Survey</h1>
         <h3>Please fill out the following questions with your best judgement.</h3>
-        <p><b>Daily Sleep Survey</b></p>
+        
      <form method="get" action="">
         <!--date-->
         <input type="date" style="text-align: center;" id="currentDate" name ="currentDate">
@@ -141,7 +135,7 @@ $clientID = 1;
                 <br><br>
 
 
-                <select id="timelights" name="Time">
+                <select id="timelights" name="amsq3">
                   <option value="1">15</option>
                   <option value="3">30</option>
                   <option value="4">45</option>
@@ -160,7 +154,7 @@ $clientID = 1;
                 <br><br>
 
 
-                <select id="howtime" name="howtime">
+                <select id="howtime" name="ansq4">
                     <option value="1">0-5</option>
                     <option value="2">6-10</option>
                     <option value="3">11-15</option>
@@ -176,7 +170,7 @@ $clientID = 1;
                 <br><br>
 
 
-                <input type="time" id="ansq5" name="ansq5">
+                <input type="time" name="ansq5">
                   
                   <br><br>
 
@@ -187,7 +181,7 @@ $clientID = 1;
                   <br><br>
 
 
-                <input type="time" id="ansq6" name="ansq6">
+                <input type="time" name="ansq6">
 
                      <br><br>
 
@@ -197,7 +191,7 @@ $clientID = 1;
 
                      <br><br>
 
-                     <input type="text" id="ansq7" name="ansq7">
+                     <input type="text" name="ansq7">
 
                      <br><br>
 
@@ -210,7 +204,7 @@ $clientID = 1;
                     <br><br>
 
 
-                    <input type="number" id="quality" name="quality" min="1" max="5">
+                    <input type="number" name="ansq8" min="1" max="5">
                   
                       <br><br>
 
@@ -222,14 +216,14 @@ $clientID = 1;
                         
                         <br><br>
 
-                        <input type = text id = "ansq9" name ="ansq9">
+                        <input type = "text" name ="ansq9">
                      
                         <br><br>
 
                           <!--Back&Submitbtn-->
 
-						<button type="submit">Back</button>
-                         <button type="submit" value="Submit" name="but_submit" id="but_submit">Submit</button>
+						             <button type="submit" name="submit" value="back">Back</button>
+                         <button type="submit" name="submit" value="submit">Submit</button>
 						
         </form>  
         </article>
