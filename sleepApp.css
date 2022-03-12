@@ -65,9 +65,12 @@ footer {
 a {
   text-decoration: none;
 }
+header a {
+  color: #fff;
+}
 .headerS {
   color: #c4e3ec;
-  font-size: 3.5em;
+  font-size: 4em;
   margin-top: 0px;
   margin-right: 0.25em;
   margin-left: 0.25em;
@@ -83,6 +86,7 @@ a {
   font-size: 0.9em;
   color: #c4e3ec;
   font-weight: bold;
+  line-height: 1.5em;
   margin-bottom: 10px;
 }
 nav a {
@@ -97,36 +101,44 @@ nav a:hover {
   border-top: 4px solid #243236;
   font-weight: bold;
 }
-
-/*************
-   Home Page
-**************/
 h1.appName {
   font-size: 2em;
   text-align: center;
 }
 
-h3.homeLinks a {
-  font-size: 1.2em;
-  color: #243236;
-}
-
-h3.homeLinks a:hover {
-  color: #fff;
-  background-color: #243236;
-}
-
+/*************
+   Home Page
+**************/
 .homeBox {
   width: 40%;
   background-color: #c4e3ec;
   text-align: center;
-  padding: 5px 10px;
+  justify-content: center;
+  padding: 20px;
   margin: 20px auto;
 }
-
+.homeBox a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  color: #243236;
+  border: 3px solid #243236;
+  border-radius: 30px 0 30px 0;
+  font-size: 1.2em;
+  font-weight: 700;
+  transition: 0.3s;
+  margin: 10px auto;
+}
+.homeBox a:hover {
+  color: #fff;
+  background-color: #243236;
+}
 p {
   font-size: 0.75em;
-  margin-top: -10px;
+  margin-top: 10px;
 }
 
 /****************
