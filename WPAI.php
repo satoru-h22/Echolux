@@ -61,11 +61,21 @@
         </header>
       <div>
 			<nav>
-			  <a href="home.html">Home</a>
-			  <a href="dailyForm.php">Form</a>
-			  <a href="Profile.php">Profile</a>
-			  <a href="report.html">Report</a>
-			  <a href="helpPage.html">Help</a>
+			 <a href="home.html">Home</a>
+                <div class="dropdown">
+                  <button class="dropbtn">Form
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="dailyform.html">Daily Survey</a>
+                    <a href="ISSI.html">ISSI</a>
+                    <a href="WPAI.html">WPAI</a>
+                  </div>
+                  </div>
+                <a href="Profile.html">Profile</a>
+                <a href="report.html">Report</a>
+                <button class = "logout">LOG OUT</button>
+               <a href="helpPage.html">Help</a>    
 			</nav>
 		</div>
         <article>
