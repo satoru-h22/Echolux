@@ -63,26 +63,21 @@ elseif (isset($_REQUEST['submit'])){
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="sleepApp.css">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;
-          background-color: #48656D;}
+        background-color:#48656D ;}
 form {border: 3px solid black;
   background-color: #8FC9D9;}
 
-input[type=email], input[type=password] {
-  width: 20%;
+input[type=text], input[type=password], input[type=email] {
+  width: 50%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
-  background: #f1f1f1;
   box-sizing: border-box;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: rgb(228, 220, 220);
-  outline: rgb(5, 5, 5);
 }
 
 button {
@@ -92,7 +87,12 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 8%;
+  width: 20%;
+}
+
+hr {
+  border: 1px solid #000000;
+  margin-bottom: 25px;
 }
 
 button:hover {
@@ -100,8 +100,8 @@ button:hover {
 }
 
 .cancelbtn {
-  width: auto;
-  padding: 10px 18px;
+  width: 20%;
+  padding: 14px 20px;
   background-color: #243236;
 }
 
@@ -110,15 +110,19 @@ button:hover {
   margin: 24px 0 12px 0;
 }
 
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
 .container {
-  padding: 20px;
-  
-text-align: center;
+  padding: 16px;
+  text-align: center;
 }
 
 span.psw {
-  float: center;
-  padding-top: 10px;
+  float: right;
+  padding-top: 16px;
 }
 
 /* Change styles for span and cancel button on extra small screens */
@@ -130,39 +134,52 @@ span.psw {
   .cancelbtn {
      width: 100%;
   }
+
 }
 </style>
 </head>
 <body>
 
-<h2>Login Form</h2>
-
-<form action="" method="post">
-  <div class="imgcontainer">
-   <h2>Sleep App</h2>
-  </div>
-
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" style=" border-bottom: none;">
   <div class="container">
+    <h1>Login</h1>
+    <p>Please enter your credentials.</p>
+    <hr>
+	
     <label for="Email"><b>Email</b></label>
     <br>
-    <input type="email" placeholder="Email" name="email" >
+    <input type="email" placeholder="Enter Email" name="email" required>
     <br>
+	
     <label for="Password"><b>Password</b></label>
     <br>
-    <input type="Password" placeholder="Enter Password" name="password" >
-        <br>
-		<button type="submit" method="POST" name="submit" id="but_submit" >Login</button>
-        
-
-    <button type="submit" value="signUp" name="signUp" id="signUp">Sign up</button>
-
-          <br>
-          <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-
-  <div class="container" style="background-color:#8FC9D9">
-    
-  </div>
+    <input type="Password" placeholder="Enter Password" name="password" required>
+    <br>
+	
+	<button type="submit" method="POST" name="submit" id="but_submit" >Login</button>
+<br>
+		
+		<div>
+			<label>
+			<input type="checkbox" checked="checked" name="remember"> Remember me
+			</label>
+		</div>
+	<div class="container" style="background-color: #8FC9D9; height: auto:">	
+		<div>
+			<div>
+			<span>Forgot <a href="#">password?</a></span>
+			</div>
+			<div>
+			<span>Need to <a href="Register.php">Register?</a></span>
+			</div>
+		</div>
+	</div>
+	<div class="container" style="background-color: #8FC9D9;">
+	</div>
+	<div class="container" style="background-color: #8FC9D9;">
+	</div>
+	
+	</div>
 </form>
 </body>
 </html>
