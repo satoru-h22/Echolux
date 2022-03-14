@@ -63,36 +63,87 @@ $clientID = 1;
 ?>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Sleep App | Form</title>
   <link rel="stylesheet" href="sleepApp.css">
+  <style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+hr {
+	width 50%;
+}
+input[type=text], input[type=number] {
+	width: 20%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	text-align: center;
+}
+input[type=time] {
+	width: 20%;
+	padding: 10px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	
+}
+select {
+	width: 20%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+form label {
+	font-size: 16;
+}
+	</style>
 </head>
 <body>
     <div class="wrapper">
-    <header>
+        <header>
       <div class="headerS">/ </div>
       <div class="headerLogo">Lana Walsh<br>Coaching</div>
       <div class="headerSub">Sleep Coach: Helping you Conquer Insomnia so <br>You Wake up Feeling Rested and Refreshed</div>
       
     </header>
 		<nav>
-      <div class="navlink"><a href="home.html">Home</a></div>
-      <div class="navlink"><a href="dailyForm.html">Form</a></div>
-      <div class="navlink"><a href="Profile.html">Profile</a></div>
-      <div class="navlink"><a href="report.html">Report</a></div>
-      <div class="navlink"><a href="helpPage.html">Help</a></div>      
+     	    <a href="home.html">Home</a>
+            <div class="dropdown">
+              <button class="dropbtn">Form
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="dailyform.html">Daily Survey</a>
+                <a href="ISSI.html">ISSI</a>
+                <a href="WPAI.html">WPAI</a>
+              </div>
+              </div>
+            <a href="Profile.html">Profile</a>
+            <a href="report.html">Report</a>
+            <button class = "logout">LOG OUT</button>
+           <a href="helpPage.html">Help</a>    
 		</nav>
-        <article>
-        <!-- This section is for the content-->
-        <h1 class="appName">Daily Sleep Survey</h1>
-        <h3>Please fill out the following questions with your best judgement.</h3>
         
+		 <article>
+        <!-- This section is for the content-->
+        <h3>Please fill out the following questions with your best judgement.</h3>
+        <p><b>Daily Sleep Survey</b></p>
+        <p><b>Please indicate the date</b></p>
      <form method="get" action="">
         <!--date-->
         <input type="date" style="text-align: center;" id="currentDate" name ="currentDate">
 
-    <br><br>
+    <br><hr>
     <!--<script>
     var today = new Date();
     var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
@@ -107,54 +158,50 @@ $clientID = 1;
 
             <!--Question1-->
 
-            <label for ="q1"><b>1.</b> What time did you go to bed? </label>
+            <label for ="q1"><b>1. What time did you go to bed? </b></label>
 
-                <br><br>
+                <br>
 
                 <input type="time" id="ansq1" name="ansq1">
 
                 <br><br>
+				
+				
 
                  <!--Question2-->
 
-                <label for ="q2"><b>2.</b> What time did you turn off the lights? </label>
+                <label for ="q2"><b>2. What time did you turn off the lights? </b></label>
 
-                <br><br>
+                <br>
 
                 <input type="time" id="ansq2" name="ansq2">
                 
-                   
-                     </select>
-
                 <br><br>
 
                 <!--Question3-->
 
-                <label for ="q3"><b>3.</b> How long did it take you to fall asleep?</label>
+                <label for ="q3"><b>3. How long did it take you to fall asleep?</b> <br>(in minutes)</label>
 
-                <br><br>
+                <br>
 
 
-                <select id="timelights" name="amsq3">
+                <select id="timelights" name="Time">
                   <option value="1">15</option>
                   <option value="3">30</option>
                   <option value="4">45</option>
                   <option value="6">60</option>
-                </select> min
-
-                
-              
+                  <option value="6">1hr+</option>
+                </select>
 
                 <br><br>
-                    
+				
                  <!--Question4-->
 
-                <label for ="q4"><b>4.</b> How many times did you wake up last night?</label>
+                <label for ="q4"><b>4. How many times did you wake up last night?</b></label>
 
-                <br><br>
+                <br>
 
-
-                <select id="howtime" name="ansq4">
+                <select id="howtime" name="howtime">
                     <option value="1">0-5</option>
                     <option value="2">6-10</option>
                     <option value="3">11-15</option>
@@ -165,66 +212,68 @@ $clientID = 1;
 
                  <!--Question5-->
 
-                <label for ="q5"><b>5.</b> What was your final wake up time this morning?</label>
+                <label for ="q5"><b>5. What was your final wake up time this morning?</b></label>
+
+                <br>
+
+
+                <input type="time" id="ansq5" name="ansq5">
+                  
+                <br><br>
+				
+                   <!--Question6-->
+                
+                <label for ="q6"><b>6. What time did you get out of bed?</b></label> 
+                  
+                <br>
+
+
+                <input type="time" id="ansq6" name="ansq6">
 
                 <br><br>
 
+                <!--Question7-->
 
-                <input type="time" name="ansq5">
-                  
-                  <br><br>
+                <label for ="q7"><b>7. Sleep Medications</b><br>(indicate dose and type)</label>
 
-                   <!--Question6-->
-                
-                  <label for ="q6"><b>6.</b> What time did you get out of bed?</label> 
-                  
-                  <br><br>
+                <br>
 
+                <input type="text" id="ansq7" name="ansq7">
 
-                <input type="time" name="ansq6">
+                <br><br>
 
-                     <br><br>
+                <!--Question8-->
 
-                     <!--Question7-->
-
-                    <label for ="q7"><b>7.</b> Sleep Medications(indicate dose and type)</label>
-
-                     <br><br>
-
-                     <input type="text" name="ansq7">
-
-                     <br><br>
-
-                     <!--Question8-->
-
-                     <label for ="q8"><b>8.</b> Rate your sleep 1-5<br>
+                <label for ="q8"><b>8. Rate your sleep 1-5</b><br>
                         (1 = very poor, 5 = very good)
-                        </label>
+                    </label>
 
-                    <br><br>
+                <br>
 
 
-                    <input type="number" name="ansq8" min="1" max="5">
+                <input type="number" id="quality" name="quality" min="1" max="5">
                   
-                      <br><br>
+                <br><br>
+				
+                <!--Question9-->
 
-                       <!--Question9-->
-
-                      <label for ="q9"><b>9.</b> Notes- possible circumstances that<br> might
-                        have contributed to how you slept.
-                        </label>   
+                <label for ="q9"><b>9. - Notes - 
+				<br>List any possible circumstances that might
+                <br>have contributed to how you slept.</b></label>   
                         
-                        <br><br>
+                <br>
 
-                        <input type = "text" name ="ansq9">
+                <input type = text id = "ansq9" name ="ansq9" style="min-height: 10%; width: 25%">
                      
-                        <br><br>
+                <br><br>
 
-                          <!--Back&Submitbtn-->
+                <!--Back&Submitbtn-->
 
-						             <button type="submit" name="submit" value="back">Back</button>
-                         <button type="submit" name="submit" value="submit">Submit</button>
-						
+                <button type="submit" value="Submit" name="but_submit" id="but_submit">Submit</button>
+				<button type="submit">Back</button>
+				
+				<br><br><br><br><br><br>
+				
         </form>  
         </article>
         <footer></footer>
