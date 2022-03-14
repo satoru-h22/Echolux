@@ -6,18 +6,21 @@
   <title>Sleep App | Report</title>
   <link rel="stylesheet" href="sleepApp.css">
   <style>
-    * { box-sizing: border-box;}
+
 		article {
 		min-height: 1000px;
 		height: auto;
 		}
+
+        header{
+            height: 100px;
+        }
 		nav {
 		text-align: center;
+        height: 100px;
 		}
 
-		article {
-		  height: 1000;
-		}
+		
 
 		* {
 		  box-sizing: border-box;
@@ -37,6 +40,19 @@
 			Position: relative;
 			
 		}
+
+        .logoutreport{
+            line-height: 12px;
+            width: 100px;
+            font-size: 8pt;
+            margin-top: 15px;
+            margin-right: 2px;
+            position:absolute;
+            top:0px; 
+            right: 48px;
+
+            
+        }
   </style>
 </head>
 <body>
@@ -48,11 +64,21 @@
       
     </header>
 		<nav>
-      <div class="navlink"><a href="home.html">Home</a></div>
-      <div class="navlink"><a href="dailyForm.html">Form</a></div>
-      <div class="navlink"><a href="Profile.html">Profile</a></div>
-      <div class="navlink"><a href="report.html">Report</a></div>
-      <div class="navlink"><a href="helpPage.html">Help</a></div>      
+            <a href="home.html">Home</a>
+            <div class="dropdown">
+              <button class="dropbtn">Form
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="dailyform.html">Daily Survey</a>
+                <a href="ISSI.html">ISSI</a>
+                <a href="WPAI.html">WPAI</a>
+              </div>
+              </div>
+            <a href="Profile.html">Profile</a>
+            <a href="report.html">Report</a>
+            <button class = "logoutreport">LOG OUT</button>
+           <a href="helpPage.html">Help</a>      
 		</nav>
         <article>
         <!-- This section is for the content--> 
