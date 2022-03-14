@@ -1,4 +1,4 @@
-<?php 
+<!--<?php 
    include "config.php"; 
    
   session_start(); 
@@ -17,7 +17,7 @@ $client_ID = $_SESSION["clientID"];
   }            
 
 
-?>
+?>-->
 
 <!doctype html>
 
@@ -144,14 +144,14 @@ $client_ID = $_SESSION["clientID"];
                 </div>
                 <div class="column">
                     <h2>Average Time To Go To Sleep</h2>  
-			<div><?php echo $row['Answer']; ?><h3> Minutes</h3></div> 
+			<!--<div><?php echo $row['Answer']; ?>--> <h3> Minutes</h3></div> 
                 </div>
                 <div class="column"> 
                     <h2>Average Time Allotted For Sleep</h2> 
-                   	 <div><?php echo $row['Answer']; ?><h3> Hours</h3></div> 
+                   	 <!--<div><?php echo $row['Answer']; ?>--> <h3> Hours</h3></div> 
                     <br></br>
                     <h2>Average Time Awake</h2> 
-			<div><?php echo $row['Answer']; ?><h3> Hours</h3></div> 
+			<!--<div><?php echo $row['Answer']; ?>--> <h3> Hours</h3></div> 
                </div>
                </div>
             
