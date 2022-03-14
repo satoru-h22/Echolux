@@ -81,10 +81,10 @@ $client_ID = $_SESSION["clientID"];
               <div class="row">
                 <div class="column">
                     <h2> Average Sleep Efficiency</h2>
-                    <div><?php echo $row['Answer']; ?></div> 
+                    <div><?php echo $row['Answer']; ?><h3>%</h3></div> 
                     <br></br>
                     <h2>Average Sleep Time</h2> 
-                    <div><?php echo $row['Answer']; ?></div> 
+                    <div><?php echo $row['Answer']; ?><h3> Hours</h3></div> 
                     <br></br>
                     <br></br>
                     <div class="graphContainer">
@@ -144,14 +144,14 @@ $client_ID = $_SESSION["clientID"];
                 </div>
                 <div class="column">
                     <h2>Average Time To Go To Sleep</h2>  
-						<div><?php echo $row['Answer']; ?></div> 
+						<div><?php echo $row['Answer']; ?><h3>Minutes</h3></div> 
                 </div>
                 <div class="column"> 
                     <h2>Average Time Allotted For Sleep</h2> 
-                    <div><?php echo $row['Answer']; ?></div> 
+                    <div><?php echo $row['Answer']; ?><h3>Hours</h3></div> 
                     <br></br>
                     <h2>Average Time Awake</h2> 
-					<div><?php echo $row['Answer']; ?></div> 
+					<div><?php echo $row['Answer']; ?><h3>Hours</h3></div> 
                </div>
                </div>
             
