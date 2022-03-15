@@ -1,83 +1,107 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
-  <meta charset="utf-8">
-  <title>Sleep App | Help</title>
-  <link rel="stylesheet" href="sleepApp.css">
-	<style>
-	article {
-		align-items: flex-start;
-		}
-	</style>
+    <title>Sleep App | Help</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="sleepapp.css">
 </head>
 
 <body>
-  <div class="wrapper">
-   <header>
-      <div class="headerS">/ </div>
-      <div class="headerLogo">Lana Walsh<br>Coaching</div>
-      <div class="headerSub">Sleep Coach: Helping you Conquer Insomnia so <br>You Wake up Feeling Rested and Refreshed</div>
-      
-    </header>
-		<nav>
-    <a href="home.html">Home</a>
-            <div class="dropdown">
-              <button class="dropbtn">Form
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                <a href="dailyform.html">Daily Survey</a>
-                <a href="ISSI.html">ISSI</a>
-                <a href="WPAI.html">WPAI</a>
-              </div>
-              </div>
-            <a href="Profile.html">Profile</a>
-            <a href="report.html">Report</a>
-            <button class = "logout">LOG OUT</button>
-           <a href="helpPage.html">Help</a>         
-		</nav>
-    <article>
-      <!-- This section is for the content-->
-     
-	 <ul>
-		<li> <ul class="hovertext" data-hover="
-			Lorem ipsum dolor sit amet,
-			 sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, 
-			 urna praesent at id quisque ac. Arcu es massa vestibulum malesuada, 
-			 integer vivamus eult eu mauris eus, cum eros quis aulquam wisi. 
-			Nulla wisi laoreet suspendisse integer vivamus eult eu mauris hendrerit faciulsi, 
-			mi mattis pariatur aulquam pharetra eget."><strong>How to access weekly report?</strong></ul></li>
-       
-      
-	  
+    <div class="wrapper">
+        <header>
+            <div class="headerS">/ </div>
+            <div class="headerLogo">Lana Walsh<br>Coaching</div>
+            <div class="headerSub">Sleep Coach: Helping you Conquer Insomnia so <br>You Wake up Feeling Rested and
+                Refreshed</div>
 
-      &nbsp;
+        </header>
+        <nav>
+            <div class="navlink"><a href="home.html">Home</a></div>
+            <div class="navlink"><a href="dailyForm.html">Form</a></div>
+            <div class="navlink"><a href="Profile.html">Profile</a></div>
+            <div class="navlink"><a href="report.html">Report</a></div>
+            <div class="navlink"><a href="helpPage.html">Help</a></div>
+        </nav>
 
-      <li> <ul class="hovertext" data-hover="
-      Lorem ipsum dolor sit amet,
-       sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, 
-       urna praesent at id quisque ac. Arcu es massa vestibulum malesuada, 
-       integer vivamus eult eu mauris eus, cum eros quis aulquam wisi. 
-       Nulla wisi laoreet suspendisse integer vivamus eult eu mauris hendrerit faciulsi, 
-      mi mattis pariatur aulquam pharetra eget.">
-      <strong>How to reset your password?</strong></ul></li>
-      
 
-      &nbsp;
+        <article>
+            <div class="container">
+                <h2>Help & Contact</h2>
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">How to access a
+                                    weekly
+                                    report?</a>
+                            </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse in">
+                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">How to reset your
+                                    password?</a>
+                            </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse">
+                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">How to access
+                                    previous week
+                                    report?</a>
+                            </h4>
+                        </div>
+                        <div id="collapse3" class="panel-collapse collapse">
+                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form">
+                <form>
+                    <br><br>
+                    <label for="fname">First Name</label>
+                    <input type="text" name="firstname" id="fname">
 
-      <li><ul class="hovertext" data-hover="
-      Lorem ipsum dolor sit amet,
-       sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, 
-       urna praesent at id quisque ac. Arcu es massa vestibulum malesuada, 
-       integer vivamus eult eu mauris eus, cum eros quis aulquam wisi. 
-       Nulla wisi laoreet suspendisse integer vivamus eult eu mauris hendrerit faciulsi, 
-      mi mattis pariatur aulquam pharetra eget.">
-        <strong>How to access previous week report?</strong>
-      </ul></li>
-	  
-    </article>
-    <footer></footer>
-  </div>
+                    <br>
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lastname" id="lname">
+                    <br>
+                    <label for="subject">subject</label>
+                    <br>
+
+
+                    <textarea name="comments" id="subject" maxlength="500" placeholder="Comment here"
+                        style="height: 200px; width: 400px;"></textarea>
+                    <br>
+                    <input type="button" value="Submit" name="Submit">
+                </form>
+            </div>
+        </article>
+        <footer></footer>
+
 </body>
 
 </html>
