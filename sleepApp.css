@@ -391,6 +391,11 @@ span.psw {
   opacity: 1;
   visibility: visible;
 }
+.form {
+  float: right;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 
 /* Screen size for a tablet */
 @media screen and (max-width: 1024px) {
