@@ -102,7 +102,7 @@ label{
     <?php
     echo "<div class='result' $resultScreen>"
         <table>
-        
+          
         </table>    
 
     echo "</div>";
